@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<form method="POST" action="{{ url_for('new_transaction') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.amount.label }} {{ form.amount() }}
+    </div>
+    <div>
+        {{ form.category.label }} {{ form.category() }}
+    </div>
+    <div>
+        {{ form.date.label }} {{ form.date() }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}

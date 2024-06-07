@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Dashboard</h2>
+<form method="POST" action="{{ url_for('new_transaction') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+<h3>Your Transactions</h3>
+<ul>
+    {% for transaction in transactions %}
+        <li>Date: {{ transaction.date }}: Amount: INR{{ transaction.amount }} - Category:{{ transaction.category }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
