@@ -23,27 +23,27 @@ A web application to track personal finances, manage transactions, and visualize
     
 ## Installation
 
-    1. Clone the repository
+1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/personal_finance_tracker.git
 cd personal_finance_tracker
 ```
 
-    2. Create the Virtual Envrionment
+2. Create the Virtual Envrionment
 
 ```bash
 python -m venv venv
 source venv\Scripts\activate
 ```
 
-    3. Install the dependencies
+3. Install the dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-    4. Initialize the database
+4. Initialize the database
 
 ```bash
 flask db init
@@ -51,7 +51,7 @@ flask db migrate -m "Initial migration"
 flask db upgrade
 ```
 
-    5. Run the application
+5. Run the application
 
 ```bash
 flask run
